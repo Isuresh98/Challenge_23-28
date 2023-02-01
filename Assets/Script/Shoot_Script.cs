@@ -6,10 +6,12 @@ public class Shoot_Script : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float Bulatspeed = 10f;
+    private AudioSource audioSource;
+    public AudioClip playerShootSound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,11 @@ public class Shoot_Script : MonoBehaviour
             Vector2 direction = (roundedPos - (Vector2)transform.position).normalized;
             rb.velocity = direction * Bulatspeed*Time.deltaTime;
             Destroy(bullet,2f);
+            audioSource.clip = playerShootSound;
+            audioSource.Play();
+
+
         }
+       
     }
 }

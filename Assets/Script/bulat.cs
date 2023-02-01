@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class bulat : MonoBehaviour
 {
-    private AudioSource audioSource;
-    public AudioClip hitSound;
+   public bool hit;
+
+    public Shoot_Script shootScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        hit = false;
+
+       shootScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shoot_Script>();
+     // shootScript = GetComponent<SetHit>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            audioSource.PlayOneShot(hitSound);
+            hit = true;
+
+            if (shootScript != null)
+            {
+                shootScript.OnHit(hit);
+                print(hit);
+            }
+            
         }
+        
+
     }
+    
 }

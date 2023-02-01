@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public Transform player;
+    private GameObject player;
     public float speed = 2f;
     public float stopDistance = 0.5f;
     private AudioSource audioSource;
     public AudioClip enemyDeathSound;
+    public bool hit;
+    public bool hito;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        player = GameObject.FindWithTag("Player");
 
     }
 
@@ -25,11 +28,11 @@ public class EnemyFollow : MonoBehaviour
 
     private void Fallow()
     {
-        float distance = Vector2.Distance(transform.position, player.position);
+        float distance = Vector2.Distance(transform.position, player.transform.position);
 
         if (distance > stopDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
         }
     }//Fallow
@@ -41,6 +44,10 @@ public class EnemyFollow : MonoBehaviour
             audioSource.PlayOneShot(enemyDeathSound);
             Destroy(collision.gameObject);
             Destroy(this.gameObject,0.8f);
+
+            
         }
+
     }
+    
 }

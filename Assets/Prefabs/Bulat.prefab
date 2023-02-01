@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6437812933197507547}
   - component: {fileID: 5715132730064981555}
   - component: {fileID: 4892490513282452815}
+  - component: {fileID: 1391972265403682518}
   m_Layer: 0
   m_Name: Bulat
   m_TagString: Bulat
@@ -217,3 +218,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1391972265403682518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601720489758584669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f05c36ca364f5419418b25a9c6db30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: 0

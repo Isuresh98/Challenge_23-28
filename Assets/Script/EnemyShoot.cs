@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public GameObject player;
+    public GameObject EnemybulletPrefab;
+    [SerializeField]private GameObject player;
     public float shootInterval = 1f;
     public float bulletSpeed = 10f;
     private AudioSource audioSource;
@@ -16,6 +16,9 @@ public class EnemyShoot : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(ShootCoroutine());
+        player = GameObject.FindWithTag("Player");
+
+
     }
 
     // Update is called once per frame
@@ -27,7 +30,7 @@ public class EnemyShoot : MonoBehaviour
     {
         while (true)
         {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate(EnemybulletPrefab, transform.position, Quaternion.identity);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Vector2 direction = (player.transform.position - transform.position).normalized;
             rb.velocity = direction * bulletSpeed * Time.deltaTime;

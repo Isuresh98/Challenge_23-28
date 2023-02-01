@@ -29,7 +29,6 @@ public class Player_Move : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyBulat"))
         {
-          
             Destroy(this.gameObject);
         }
     }

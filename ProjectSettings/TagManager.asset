@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bulat
   - Enemy
+  - EnemyBulat
   layers:
   - Default
   - TransparentFX

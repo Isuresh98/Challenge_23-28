@@ -24,4 +24,13 @@ public class Player_Move : MonoBehaviour
         Vector2 direction = new Vector2(horizontal, vertical);
         rb.velocity = direction * speed*Time.deltaTime;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBulat"))
+        {
+          
+            Destroy(this.gameObject);
+        }
+    }
 }

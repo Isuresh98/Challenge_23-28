@@ -40,7 +40,7 @@ public class EnemyFollow : MonoBehaviour
         {
             audioSource.PlayOneShot(enemyDeathSound);
             Destroy(collision.gameObject);
-            Destroy(gameObject,0.8f);
+            Destroy(this.gameObject,0.8f);
         }
     }
 }

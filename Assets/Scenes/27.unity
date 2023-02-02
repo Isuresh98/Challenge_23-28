@@ -204,49 +204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &966616350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 966616352}
-  - component: {fileID: 966616351}
-  m_Layer: 0
-  m_Name: sethit
-  m_TagString: sethit
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &966616351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966616350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875c601c92151f7409a7a6557f59a19a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &966616352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966616350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1038644, y: -0.43467858, z: -3.869944}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1016741859 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1391972265403682518, guid: 3d9017bd3bcab8948a486bfac181c0db,
@@ -266,11 +223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3381000392817653891, guid: 77d283be4c799ec44ac83cede11c46a1,
-        type: 3}
-      propertyPath: Bulatspeed
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 3381000392817653891, guid: 77d283be4c799ec44ac83cede11c46a1,
         type: 3}
       propertyPath: bulatScript

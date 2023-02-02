@@ -5,7 +5,6 @@ using UnityEngine;
 public class bulat : MonoBehaviour
 {
    public bool hit;
-
     public Shoot_Script shootScript;
 
     // Start is called before the first frame update
@@ -14,28 +13,42 @@ public class bulat : MonoBehaviour
         hit = false;
 
        shootScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shoot_Script>();
-     // shootScript = GetComponent<SetHit>();
+    
     }
 
     // Update is called once per frame
     void Update()
     {
        
+
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
+        {
+            hit = false;
+
+            if (shootScript != null)
+            {
+                shootScript.OnHit(hit);
+                
+            }
+
+        }
+        if (collision.gameObject.CompareTag("bound"))
         {
             hit = true;
 
             if (shootScript != null)
             {
                 shootScript.OnHit(hit);
-                print(hit);
+
             }
-            
         }
-        
+
+
+
+
 
     }
     

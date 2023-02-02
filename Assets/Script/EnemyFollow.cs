@@ -9,8 +9,7 @@ public class EnemyFollow : MonoBehaviour
     public float stopDistance = 0.5f;
     private AudioSource audioSource;
     public AudioClip enemyDeathSound;
-    public bool hit;
-    public bool hito;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +42,8 @@ public class EnemyFollow : MonoBehaviour
         {
             audioSource.PlayOneShot(enemyDeathSound);
             Destroy(collision.gameObject);
-            Destroy(this.gameObject,0.8f);
-
-            
+            Destroy(this.gameObject,0.7f);
+  
         }
 
     }

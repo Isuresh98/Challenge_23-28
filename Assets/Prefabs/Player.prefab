@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb0eb52dce2e98479d90147175f059d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulatspeed: 300
+  Bulatspeed: 600
   playerShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
   enemyPrefab: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
     type: 3}

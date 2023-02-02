@@ -136,7 +136,6 @@ MonoBehaviour:
   playerShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
   enemyPrefab: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
     type: 3}
-  bulatScript: {fileID: 0}
 --- !u!82 &50269768
 AudioSource:
   m_ObjectHideFlags: 0

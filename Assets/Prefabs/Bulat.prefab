@@ -231,3 +231,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
+  shootScript: {fileID: 3381000392817653891, guid: 77d283be4c799ec44ac83cede11c46a1,
+    type: 3}

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Shoot_Script : MonoBehaviour
 {
-    private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab;
     public float Bulatspeed = 100f;
     private AudioSource audioSource;
     public AudioClip playerShootSound;
    [SerializeField] private GameObject enemyPrefab;
     Vector3 mousePoss;
-    
+  
    
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        bulletPrefab = GameObject.FindWithTag("Bulat");
+       // bulletPrefab = GameObject.FindWithTag("Bulat");
  
     }
 
@@ -33,18 +33,21 @@ public class Shoot_Script : MonoBehaviour
         {
             print("hit true");
             enemyIns();
+        
 
         }
         else 
         {
             print(" hit fasle");
+            
+
 
         }
 
     }
 
 
-    private void Shoot()
+   public void Shoot()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -59,15 +62,17 @@ public class Shoot_Script : MonoBehaviour
             audioSource.clip = playerShootSound;
             audioSource.Play();
             mousePoss= worldPos ;
+           
 
         }
 
     }
     
-  void enemyIns()
+  public void enemyIns()
     {
-       
-            GameObject enemy = Instantiate(enemyPrefab, mousePoss, Quaternion.identity);
+
+        GameObject enemy = Instantiate(enemyPrefab, mousePoss, Quaternion.identity);
+
     }
 
 

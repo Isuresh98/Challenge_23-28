@@ -44,6 +44,7 @@ public class bulat : MonoBehaviour
                 shootScript.OnHit(hit);
 
             }
+            Destroy(gameObject);
         }
 
 

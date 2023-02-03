@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7702246962575314476}
   - component: {fileID: 7702246962575314479}
-  - component: {fileID: 7702246962575314478}
   - component: {fileID: 7702246962575314481}
-  - component: {fileID: 3381000392817653891}
   - component: {fileID: 50269768}
   - component: {fileID: 1034193964}
+  - component: {fileID: 4327611844545935411}
+  - component: {fileID: 4331223402729520815}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7702246962575314478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7702246962575314480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a0f4899e2e8b64c95a4c48c40dddce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 250
 --- !u!50 &7702246962575314481
 Rigidbody2D:
   serializedVersion: 4
@@ -111,7 +98,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -120,22 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3381000392817653891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7702246962575314480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb0eb52dce2e98479d90147175f059d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bulatspeed: 600
-  playerShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
-  enemyPrefab: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
-    type: 3}
 --- !u!82 &50269768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -248,3 +219,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &4327611844545935411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702246962575314480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a0f4899e2e8b64c95a4c48c40dddce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 200
+--- !u!114 &4331223402729520815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702246962575314480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb0eb52dce2e98479d90147175f059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulatPrefabs: {fileID: 1601720489758584669, guid: 3d9017bd3bcab8948a486bfac181c0db,
+    type: 3}
+  _bulatSpeed: 300
+  PlayerShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}

@@ -4,48 +4,38 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    private GameObject player;
-    public float speed = 2f;
-    public float stopDistance = 0.5f;
-    private AudioSource audioSource;
-    public AudioClip enemyDeathSound;
+   // public Transform Player;
+    private GameObject Player;
+    public float Speed;
+    [SerializeField]private float _stopDistans;
+    [SerializeField] private float _distans;
   
-
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        player = GameObject.FindWithTag("Player");
-
+        Player = GameObject.FindWithTag("Player");
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        Fallow();
-    }
-
-    private void Fallow()
-    {
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-
-        if (distance > stopDistance)
+        _distans = Vector2.Distance(transform.position, Player.transform.position);
+        if (_distans > _stopDistans)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, Speed * Time.deltaTime);
 
         }
-    }//Fallow
-
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bulat"))
         {
-            audioSource.PlayOneShot(enemyDeathSound);
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject,0.7f);
-  
+            
+            Destroy(collision.gameObject,2f);
+            Destroy(gameObject);
+            
         }
-
     }
-    
+
 }

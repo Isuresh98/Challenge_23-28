@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject EnemybulletPrefab;
-    [SerializeField]private GameObject player;
-    public float shootInterval = 1f;
-    public float bulletSpeed = 10f;
+    public GameObject EnemyBulatPrefabs;
+    public GameObject Player;
+    public float ShootIntavel =1f;
+    public float BulatSpeed =10f;
     private AudioSource audioSource;
-    public AudioClip enemyShootSound;
+    public AudioClip EnemyShootSound;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        StartCoroutine(ShootCoroutine());
-        player = GameObject.FindWithTag("Player");
-
-
+        StartCoroutine(ShootCorotine());
     }
 
     // Update is called once per frame
@@ -26,18 +23,17 @@ public class EnemyShoot : MonoBehaviour
     {
         
     }
-    IEnumerator ShootCoroutine()
+   IEnumerator ShootCorotine()
     {
         while (true)
         {
-            GameObject bullet = Instantiate(EnemybulletPrefab, transform.position, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-            rb.velocity = direction * bulletSpeed * Time.deltaTime;
-            audioSource.PlayOneShot(enemyShootSound);
-            Destroy(bullet, 2f);
-            yield return new WaitForSeconds(shootInterval);
+            GameObject bulat = Instantiate(EnemyBulatPrefabs, transform.position, Quaternion.identity);
+            Rigidbody2D rb = bulat.GetComponent<Rigidbody2D>();
+            Vector2 Dix = (Player.transform.position - transform.position).normalized;
+            rb.velocity = Dix * BulatSpeed * Time.deltaTime;
+            audioSource.PlayOneShot(EnemyShootSound);
+            Destroy(bulat, 3f);
+            yield return new WaitForSeconds(ShootIntavel);
         }
     }
-
     }

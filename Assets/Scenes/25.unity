@@ -134,16 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5366839965912972828, guid: ab161f7bf72e58a419875b7b20848c0a,
-        type: 3}
-      propertyPath: player
+    - target: {fileID: 299471833, guid: ab161f7bf72e58a419875b7b20848c0a, type: 3}
+      propertyPath: Player
       value: 
       objectReference: {fileID: 50269767}
-    - target: {fileID: 5366839965912972828, guid: ab161f7bf72e58a419875b7b20848c0a,
-        type: 3}
-      propertyPath: enemyDeathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d3d1ef8fe69dacd43993c100a9ca151e, type: 3}
     - target: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
         type: 3}
       propertyPath: m_Name
@@ -206,75 +200,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab161f7bf72e58a419875b7b20848c0a, type: 3}
---- !u!1001 &728206743
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1601720489758584669, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_Name
-      value: Bulat
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.6556555
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233570056523419753, guid: 3d9017bd3bcab8948a486bfac181c0db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3d9017bd3bcab8948a486bfac181c0db, type: 3}
 --- !u!1 &1220379739
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,11 +290,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3381000392817653891, guid: 77d283be4c799ec44ac83cede11c46a1,
-        type: 3}
-      propertyPath: playerShootSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
     - target: {fileID: 7702246962575314476, guid: 77d283be4c799ec44ac83cede11c46a1,
         type: 3}
       propertyPath: m_RootOrder

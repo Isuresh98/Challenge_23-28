@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
-    public float speed = 5f;
-    private Rigidbody2D rb;
+    [SerializeField] public float _speed;
+    private Rigidbody2D _rbody;
+    float horizontalInput;
+    float verticalInput;
+   
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Movement();
+
     }
     void Movement()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector2 direction = new Vector2(horizontal, vertical);
-        rb.velocity = direction * speed*Time.deltaTime;
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        Vector2 Direction = new Vector2(horizontalInput, verticalInput);
+        _rbody.velocity = Direction * _speed * Time.deltaTime;
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBulat"))

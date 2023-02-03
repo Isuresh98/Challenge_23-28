@@ -452,6 +452,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998814017, guid: ab161f7bf72e58a419875b7b20848c0a, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1947509475}
     - target: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
         type: 3}
       propertyPath: m_Name
@@ -739,6 +743,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1947509475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7702246962575314480, guid: 77d283be4c799ec44ac83cede11c46a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2018714659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2018714659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -751,6 +761,12 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1601720489758584669, guid: 3d9017bd3bcab8948a486bfac181c0db,
+        type: 3}
+    - target: {fileID: 4331223402729520815, guid: 77d283be4c799ec44ac83cede11c46a1,
+        type: 3}
+      propertyPath: EnemyPrefabs
+      value: 
+      objectReference: {fileID: 5366839965912972896, guid: ab161f7bf72e58a419875b7b20848c0a,
         type: 3}
     - target: {fileID: 7702246962575314476, guid: 77d283be4c799ec44ac83cede11c46a1,
         type: 3}

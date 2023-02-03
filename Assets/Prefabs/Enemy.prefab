@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5366839965912972898}
   - component: {fileID: 5366839965912972897}
-  - component: {fileID: 5366839965912972828}
   - component: {fileID: 5366839965912972899}
   - component: {fileID: 6415093230917889929}
   - component: {fileID: 504003874906748265}
-  - component: {fileID: 2379955737966564404}
+  - component: {fileID: 299471833}
+  - component: {fileID: 1998814017}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -86,23 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5366839965912972828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5366839965912972896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d83238209324eb4589324384e2be1a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  stopDistance: 2
-  enemyDeathSound: {fileID: 8300000, guid: d3d1ef8fe69dacd43993c100a9ca151e, type: 3}
-  hit: 0
-  hito: 0
 --- !u!50 &5366839965912972899
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +98,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.01
   m_GravityScale: 0
@@ -123,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6415093230917889929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -246,7 +229,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2379955737966564404
+--- !u!114 &299471833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366839965912972896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d83238209324eb4589324384e2be1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
+  _stopDistans: 3.5
+  _distans: 0
+--- !u!114 &1998814017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,9 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103f5c7b9939e9c46a94fa9866083687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemybulletPrefab: {fileID: 1479929205828181879, guid: 6a0dfa0cc8aee0f458a791f2849822b0,
+  EnemyBulatPrefabs: {fileID: 1479929205828181879, guid: 6a0dfa0cc8aee0f458a791f2849822b0,
     type: 3}
-  player: {fileID: 7702246962575314480, guid: 77d283be4c799ec44ac83cede11c46a1, type: 3}
-  shootInterval: 3
-  bulletSpeed: 500
-  enemyShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
+  Player: {fileID: 7702246962575314480, guid: 77d283be4c799ec44ac83cede11c46a1, type: 3}
+  ShootIntavel: 1
+  BulatSpeed: 250
+  EnemyShootSound: {fileID: 8300000, guid: 0a3b33db8c3fd7745b13b932a6ed6cae, type: 3}
